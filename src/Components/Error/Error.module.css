@@ -1,36 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
 .divContainer {
-    opacity: 1;
-    background-image: url('https://images.unsplash.com/photo-1555861496-0666c8981751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    align-items:center;
-    text-align: center;
+  opacity: 1;
+  background-image: url("https://images.unsplash.com/photo-1555861496-0666c8981751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
 }
 
 .title {
-    justify-content: center;
-    font-family: "Mulish", "sans-serif";
-    color: #e6e6e6;
-    align-items:center;
-    text-align: center;
+  justify-content: center;
+  font-family: "Mulish", "sans-serif";
+  color: #e6e6e6;
+  align-items: center;
+  text-align: center;
 }
 
 .btn {
-    justify-content: center;
-    text-decoration: none;
-    background-color: transparent;
-    color: #e6e6e6;
-    border-radius: 30px;
-    font-size: 20px;
-/*     margin-left: 50%;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: #e6e6e6;
+  border-radius: 30px;
+  font-size: 20px;
+  /*     margin-left: 50%;
     display:flex; */
 }
 
 .btn:hover {
-    color:#d465a754;
+  color: #d465a754;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from '../Error/Error.module.css'
 
-export default function Error() {
+const Error = () => {
     return (
         <div className={style.divContainer}>
             <h1 className={style.title}>Sorry, Page Not Found</h1>
@@ -10,3 +10,4 @@ export default function Error() {
         </div>
     )
 }
+export default Error; 

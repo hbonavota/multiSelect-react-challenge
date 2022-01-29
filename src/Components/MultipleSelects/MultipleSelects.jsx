@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import styles from "./MultipleSelectsV1.css";
+import styles from "./MultipleSelects.module.css";
 
 const optionData = [
     { label: "Family", value: "Family" },
@@ -21,7 +21,7 @@ const MultipleSelectsV1 = () => {
     let chooseWithSpread = [...chooseValue, "...", selectedValues.length - chooseValue.length];
 
     const toggle = () => {
-        toggleValue ? settoggleValue(false) : settoggleValue(true)
+        toggleValue ? settoggleValue(false) : settoggleValue(true);
     }
 
     const handleChange = () => {
@@ -34,39 +34,37 @@ const MultipleSelectsV1 = () => {
     }
 
     return (
-        <div className={styles.faq_container}>
-            <h3 className={styles.title_v2}>Multi Select</h3>
-            <div className={styles.faq}>
+        <div className={styles.container}>
+
+            <header className={styles.title_v2} >
+                <Link to="/"><button className={styles.btnBack}>Go Back Home</button></Link>
+                <h3 className={styles.title_v2}>Multi Select</h3>
+            </header>
+
+            <div className={styles.component}>
                 {
-                    toggleValue ?
-                        null
-                        :
-                        <span className={toggleValue || selectedValues.length > 0 ? styles.inputChoose : styles.active}>Choose a tag</span>
+                    <span className={toggleValue || selectedValues.length > 0 ? styles.inputChoose : styles.active}>Choose a tag.</span>
                 }
 
                 <div className={styles.lista}>
                     {
                         selectedValues.length > 3 ?
-                        chooseWithSpread?.map((e) => <li>{e}</li>)
-                        :
-                        selectedValues?.map((e) => <li>{e}</li>)
+                            chooseWithSpread?.map((e) => <li>{e}</li>)
+                            :
+                            selectedValues?.map((e) => <li>{e}</li>)
                     }
                 </div>
-                <div className={styles.allCheckboxDiv}>
-                    <form id="formCheckbox" onChange={handleChange} className={toggleValue ? styles.active : styles.faq_toggle}>
-                        <div className={styles.fa_times}>
+                <div>
+                    <form id="formCheckbox" onChange={handleChange} className={toggleValue ? styles.active : styles.component_toggle}>
+                        <div className={toggleValue ? styles.fa_times : styles.timesNone}>
                             {
                                 optionData.map((e) => <label className={styles.label_tag} >{e.label}<input type="checkbox" value={e.value}></input> </label>)
                             }
                         </div>
                     </form>
                 </div>
-                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.faq_toggle}>
-                   {/*  <i className="fa-times"></i> */}
-                    {/* <i className="faq-toggle"> ↓</i> */}↓
-                </button>
+                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}>↓</button>
             </div>
-            <Link to="/"><button className={styles.btnError}>Click here to go back</button></Link>
         </div>
     );
 

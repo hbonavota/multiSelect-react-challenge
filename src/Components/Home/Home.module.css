@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-
 }
 
 .Home_header {
@@ -19,10 +18,10 @@
 }
 
 .Home_title {
-  font-family: "Mulish","sans-serif",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  justify-content:-center;
+  font-family: "Mulish", "sans-serif", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  justify-content: -center;
   margin: 10px;
   color: #13c6f8;
 }

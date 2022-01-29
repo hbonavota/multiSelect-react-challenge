@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+@media only screen and (min-width: 1200px) {
+  .component {
+    width: 450px;
+  }
+  .lista li {
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .component {
+    width: 250px;
+    white-space: pre;
+  }
+  .lista {
+    overflow: scroll;
+    padding: 7px;
+  }
+}
+
+.container {
+  height: 100vh;
+  flex-direction: row;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.title_v2 {
+  display: block;
+  text-align: center;
+}
+
+.inputChoose {
+  display: none;
+}
+
+.component {
+  background-color: rgba(239, 241, 243, 255);
+  border: 1px solid #9fa4a8;
+  border-radius: 35px;
+  margin-top: 120px;
+  padding: 25px;
+  position: absolute;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.component.active {
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.component.active::before {
+  color: #6b3255;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+  position: relative;
+}
+.component.active {
+  display: block;
+}
+
+.component_toggle {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  right: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.component_toggle:hover {
+  border: 1px solid #e6e6e6;
+}
+
+.component_toggle:focus {
+  outline: none;
+}
+
+.component_toggle .fa-times {
+  display: none;
+  border: none;
+}
+
+.fa_times {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.timesNone {
+  display: none;
+}
+
+.active2 {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 15px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.lista li {
+  background-color: #d465a8;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 9px;
+  color: rgb(247, 234, 234);
+  display: inline;
+  padding-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+.lista {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+.label_tag {
+  margin-right: 5px;
+  padding: 5px;
+  font-family: "Mulish", "sans-serif";
+  font-size: 18px;
+  bottom: 0;
+}
+
+.btnBack {
+  background-color: rgba(239, 241, 243, 255);
+  border-radius: 10px;
+  padding: 2px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  border: 1px solid #9fa4a8;
+}
+
+.btnBack:hover {
+  color: #6b3255;
+}
