@@ -1,0 +1,38 @@
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    width: 100vh;
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  margin: 0px auto 0;
+  position: flex;
+  height: 50px;
+  background-color: rgb(52, 73, 94, 0.6);
+  border-radius: 8px;
+}
+
+.navbar span {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  padding-inline-end: 5px;
+  padding-inline-start: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+
+span:nth-child(1):hover {
+  color: #13c6f8;
+}

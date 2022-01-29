@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+.App {
+  text-align: center;
+}
+.app-title {
+  font-family: "Mulish", "sans-serif", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  justify-content: -center;
+  margin: 10px;
+  color: #13c6f8;
+}
