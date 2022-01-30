@@ -93,10 +93,10 @@
 }
 
 .fa_times {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 10px;
+  display: flex;
 }
 .timesNone {
   display: none;
@@ -113,6 +113,16 @@
   width: 30px;
   border: none;
   cursor: pointer;
+}
+
+.inputSearch {
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: -webkit-fill-available;
 }
 
 .lista li {
