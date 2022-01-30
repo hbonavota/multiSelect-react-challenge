@@ -54,9 +54,14 @@ const MultipleSelectsV1 = () => {
                             selectedValues?.map((e) => <li>{e}</li>)
                     }
                 </div>
+
                 <div>
                     <form id="formCheckbox" onChange={handleChange} className={toggleValue ? styles.active : styles.component_toggle}>
                         <div className={toggleValue ? styles.fa_times : styles.timesNone}>
+
+                                <input className={styles.inputSearch} type="search" placeholder="Search..." ></input>
+                            <div claseName={styles.inputSearch}>
+                            </div>
                             {
                                 optionData.map((e) => <label className={styles.label_tag} >{e.label}<input type="checkbox" value={e.value}></input> </label>)
                             }
