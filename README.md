@@ -49,3 +49,6 @@ npm start
 + [Click Here](https://multi-select-react-challenge.vercel.app/).
 
 ![Screenshot.](./img/Component-Multi-Select.png)
+
++ ## Updated with input autocomplete
+![Screenshot.](./img/autocomplete.PNG)
