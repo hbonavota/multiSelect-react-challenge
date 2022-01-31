@@ -85,7 +85,7 @@ const MultipleSelectsV1 = () => {
                         </div>
                     </form>
                 </div>
-                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}><p><i class={styles.arrow}></i></p></button>
+                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}><p><i class={toggleValue ? styles.arrowUp : styles.arrowDown  }></i></p></button>
             </div>
         </div>
     );
