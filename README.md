@@ -1,4 +1,12 @@
+
 # Multi-Select App React
+
++ Multiple Select Component is required in React without using external libraries (Multiple Select)
+
+Image is attached:
+
+![Screenshot.](./img/Requested.PNG)
+
 
 Created with 
 + *react-app.*
