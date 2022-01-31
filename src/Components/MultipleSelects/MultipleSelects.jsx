@@ -54,7 +54,7 @@ const MultipleSelectsV1 = () => {
         <div className={styles.container}>
 
             <header className={styles.title_v2} >
-                <Link to="/"><button className={styles.btnBack}>Go Back Home</button></Link>
+                <Link to="/"><button className={styles.btnBack}>Go Back</button></Link>
                 <h3 className={styles.title_v2}>Multi Select</h3>
             </header>
 
@@ -85,7 +85,7 @@ const MultipleSelectsV1 = () => {
                         </div>
                     </form>
                 </div>
-                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}>↓</button>
+                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}><p><i class={styles.arrow}></i></p></button>
             </div>
         </div>
     );
