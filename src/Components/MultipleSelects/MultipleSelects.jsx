@@ -17,6 +17,7 @@ const MultipleSelectsV1 = () => {
     const [toggleValue, settoggleValue] = useState(false);
     const [selectedValues, setSelectedValues] = useState([]);
     const [inputValue, setInputValue] = useState("");
+    let valueChecked = [];
 
     let chooseValue = selectedValues.slice(0, 3);
     let chooseWithSpread = [...chooseValue, "...", selectedValues.length - chooseValue.length];
@@ -27,16 +28,15 @@ const MultipleSelectsV1 = () => {
 
     const handleChange = () => {
         let allOptionsForm = document.getElementById("formCheckbox");
-        let valueChecked = [];
         for (var i = 0, l = allOptionsForm.length; i < l; i++) {
             if (allOptionsForm[i].checked) valueChecked.push(allOptionsForm[i].value);
         }
         setSelectedValues(valueChecked);
+
     }
     const handleInputChange = (e) => {
         e.preventDefault();
         setInputValue(e.target.value);
-        autocomplete();
     }
     const autocomplete = () => {
         const optionsValues = optionData.map(e => e.value.toLowerCase());
@@ -47,7 +47,7 @@ const MultipleSelectsV1 = () => {
     }
 
     const showAutoComplete = (found) => {
-        return found?.map((e) => <label className={styles.label_tag} >{e}<input type="checkbox" value={e}></input> </label>)
+        return found?.map((e) => <label key={e} className={styles.label_tag} >{e}<input type="checkbox" value={e}></input> </label>)
     }
 
     return (
@@ -55,7 +55,7 @@ const MultipleSelectsV1 = () => {
 
             <header className={styles.title_v2} >
                 <Link to="/"><button className={styles.btnBack}>Go Back</button></Link>
-                <h3 className={styles.title_v2}>Multi Select</h3>
+                <h1 className={styles.title_v2}>Multi Select</h1>
             </header>
 
             <div className={styles.component}>
@@ -85,7 +85,7 @@ const MultipleSelectsV1 = () => {
                         </div>
                     </form>
                 </div>
-                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}><p><i class={toggleValue ? styles.arrowUp : styles.arrowDown  }></i></p></button>
+                <button onClick={toggle} className={toggleValue ? styles.active2 : styles.component_toggle}><p><i className={toggleValue ? styles.arrowUp : styles.arrowDown}></i></p></button>
             </div>
         </div>
     );
