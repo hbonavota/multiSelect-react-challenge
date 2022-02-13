@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 600px) {
   .component {
     width: 450px;
   }
@@ -125,7 +125,7 @@
   width: -webkit-fill-available;
 }
 
-.lista li {
+.lista button {
   background-color: #d465a8;
   border-radius: 10px;
   padding: 5px;
