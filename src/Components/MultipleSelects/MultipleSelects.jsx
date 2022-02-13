@@ -18,26 +18,35 @@ const MultipleSelectsV1 = () => {
     const [selectedValues, setSelectedValues] = useState([]);
     const [inputValue, setInputValue] = useState("");
     let valueChecked = [];
-
+    
     let chooseValue = selectedValues.slice(0, 3);
     let chooseWithSpread = [...chooseValue, "...", selectedValues.length - chooseValue.length];
-
+    
     const toggle = () => {
         toggleValue ? settoggleValue(false) : settoggleValue(true);
     }
 
+    const compareSelection = (elem)=>{
+        valueChecked.filter((e)=> e !== elem)
+
+        setSelectedValues(valueChecked);
+    }
+    
     const handleChange = () => {
         let allOptionsForm = document.getElementById("formCheckbox");
-        for (var i = 0, l = allOptionsForm.length; i < l; i++) {
-            if (allOptionsForm[i].checked) valueChecked.push(allOptionsForm[i].value);
+        for (let elem of allOptionsForm ) {
+            elem.checked ? 
+            valueChecked.push(elem.value)
+            :
+            compareSelection(elem);
         }
-        setSelectedValues(valueChecked);
-
     }
+
     const handleInputChange = (e) => {
         e.preventDefault();
         setInputValue(e.target.value);
     }
+
     const autocomplete = () => {
         const optionsValues = optionData.map(e => e.value.toLowerCase());
         return optionsValues.filter(e => {
@@ -50,12 +59,13 @@ const MultipleSelectsV1 = () => {
         return found?.map((e) => <label key={e} className={styles.label_tag} >{e}<input type="checkbox" value={e}></input> </label>)
     }
 
+
     return (
         <div className={styles.container}>
 
             <header className={styles.title_v2} >
                 <Link to="/"><button className={styles.btnBack}>Go Back</button></Link>
-                <h1 className={styles.title_v2}>Multi Select</h1>
+                <h1 className={styles.title_v2}>Multi-Select</h1>
             </header>
 
             <div className={styles.component}>
@@ -66,19 +76,19 @@ const MultipleSelectsV1 = () => {
                 <div className={styles.lista}>
                     {
                         selectedValues.length > 3 ?
-                            chooseWithSpread?.map((e) => <li key={e}>{e}</li>)
-                            :
-                            selectedValues?.map((e) => <li key={e}>{e}</li>)
+                        chooseWithSpread?.map((el) => <button key={el}>{el}</button>)
+                        :
+                        chooseValue?.map((e) => <button key={e}>{e}</button>)
                     }
                 </div>
 
-                <div>
-                    <form id="formCheckbox" onChange={handleChange} className={toggleValue ? styles.active : styles.component_toggle}>
+                <div className={toggleValue ? styles.active : styles.component_toggle}>
+                            <input value={inputValue} onChange={handleInputChange} className={styles.inputSearch} type="search" placeholder="Search..." ></input>
+                    <form id="formCheckbox" onChange={handleChange} >
                         <div className={toggleValue ? styles.fa_times : styles.timesNone}>
 
-                            <input value={inputValue} onChange={handleInputChange} className={styles.inputSearch} type="search" placeholder="Search..." ></input>
                             <div className={styles.inputSearch}>
-                            </div>
+                        </div>
                             {
                                 showAutoComplete(autocomplete())
                             }
@@ -89,7 +99,6 @@ const MultipleSelectsV1 = () => {
             </div>
         </div>
     );
-
 }
 
 export default MultipleSelectsV1;
